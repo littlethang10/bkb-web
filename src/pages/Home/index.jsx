@@ -1,6 +1,6 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
-import Header from '../../components/Header'
+import Header from '~/components/Header'
 
 
 function Home() {
