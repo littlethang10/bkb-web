@@ -3,6 +3,9 @@ import { red } from '@mui/material/colors'
 
 // Create a theme instance.
 const theme = extendTheme({
+  bkbCustom: {
+    headerHeight: '58px'
+  },
   colorSchemes: {
     light: {
       palette: {
