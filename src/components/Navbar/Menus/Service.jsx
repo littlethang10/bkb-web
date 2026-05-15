@@ -1,0 +1,45 @@
+import * as React from 'react'
+import Button from '@mui/material/Button'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Box from '@mui/material/Box'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+
+function Service() {
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget)
+  }
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
+  return (
+    <Box>
+      <Button
+        id="basic-button-service"
+        aria-controls={open ? 'basic-menu-service' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        endIcon={<ExpandMoreIcon />}
+      >
+        Dịch vụ bảo vệ
+      </Button>
+      <Menu
+        id="basic-menu-service"
+        aria-labelledby="basic-button-service"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+    </Box>
+  )
+}
+
+export default Service
