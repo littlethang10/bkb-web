@@ -1,28 +1,77 @@
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
+import { common } from '@mui/material/colors'
+
 
 // Create a theme instance.
 const theme = extendTheme({
   bkbCustom: {
-    headerHeight: '58px'
+    headerHeight: '78px',
+    navbarHeight: '58px'
+  },
+  typography: {
+    fontFamily: [
+      '"Plus Jakarta Sans"', // Lưu ý: Tên font có khoảng trắng nên phải được bọc trong ngoặc kép '' ""
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif'
+    ].join(',')
   },
   colorSchemes: {
     light: {
       palette: {
         primary: {
-          main: red[600]
+          main: common.white
         }
       }
     },
     dark: {
       palette: {
         primary: {
-          main: red[400]
+          main: common.black
         }
       }
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none'
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main
+        })
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          fontSize: '0.875rem',
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: theme.palette.primary.dark
+          },
+          '&:hover': {
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main
+            }
+          },
+          '& fieldset': {
+            borderWidth: '1px !important'
+          }
+        })
+      }
+    }
   }
-  // ...other properties
+
+
 })
 
 export default theme
