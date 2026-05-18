@@ -15,7 +15,10 @@ function Navbar() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      px: 3
+      px: 3,
+      '& *': {
+        fontSize: '1.1rem !important'// Đổi số này (ví dụ: 1.2rem, 18px...) cho đến khi vừa mắt
+      }
     }}>
       {/* MENUS */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0, height: '100%' }}>

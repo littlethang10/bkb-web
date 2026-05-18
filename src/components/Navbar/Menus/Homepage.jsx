@@ -17,6 +17,7 @@ function Homepage() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-homepage"
         aria-controls={open ? 'basic-menu-homepage' : undefined}
         aria-haspopup="true"

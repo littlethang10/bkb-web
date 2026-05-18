@@ -18,6 +18,7 @@ function News() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-news"
         aria-controls={open ? 'basic-menu-news' : undefined}
         aria-haspopup="true"

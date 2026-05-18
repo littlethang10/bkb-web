@@ -10,7 +10,7 @@ const theme = extendTheme({
   },
   typography: {
     fontFamily: [
-      '"Plus Jakarta Sans"', // Lưu ý: Tên font có khoảng trắng nên phải được bọc trong ngoặc kép '' ""
+      '"Plus Jakarta Sans"',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -43,35 +43,8 @@ const theme = extendTheme({
           textTransform: 'none'
         }
       }
-    },
-    MuiInputLabel: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          color: theme.palette.primary.main
-        })
-      }
-    },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          fontSize: '0.875rem',
-          '.MuiOutlinedInput-notchedOutline': {
-            borderColor: theme.palette.primary.dark
-          },
-          '&:hover': {
-            '.MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.primary.main
-            }
-          },
-          '& fieldset': {
-            borderWidth: '1px !important'
-          }
-        })
-      }
     }
   }
-
-
 })
 
 export default theme
