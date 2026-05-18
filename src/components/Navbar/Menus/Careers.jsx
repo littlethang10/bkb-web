@@ -18,6 +18,7 @@ function Careers() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-careers"
         aria-controls={open ? 'basic-menu-careers' : undefined}
         aria-haspopup="true"

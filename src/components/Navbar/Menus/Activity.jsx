@@ -18,6 +18,7 @@ function Activity() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-activity"
         aria-controls={open ? 'basic-menu-activity' : undefined}
         aria-haspopup="true"

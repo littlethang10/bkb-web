@@ -18,6 +18,7 @@ function AboutUs() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-aboutus"
         aria-controls={open ? 'basic-menu-aboutus' : undefined}
         aria-haspopup="true"
